@@ -1,0 +1,57 @@
+{
+  "name": "graphql-anywhere-mongodb-middleware-express",
+  "version": "0.1.0",
+  "description": "express middleware that accepts graphql requests and runs them as mongo queries",
+  "main": "dist/src/index.js",
+  "typings": "dist/src/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc -p .",
+    "test": "nyc mocha",
+    "test:watch": "mocha -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dflor003/graphql-anywhere-mongodb-middleware-express.git"
+  },
+  "keywords": [
+    "graphql-anywhere",
+    "graphql",
+    "express",
+    "middleware",
+    "mongodb"
+  ],
+  "author": "Danil Flores <dflor003@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dflor003/graphql-anywhere-mongodb-middleware-express/issues"
+  },
+  "homepage": "https://github.com/dflor003/graphql-anywhere-mongodb-middleware-express#readme",
+  "dependencies": {
+    "@types/mongodb": "^2.2.7",
+    "debug": "^2.6.8",
+    "express": "^4.15.3",
+    "graphql": "^0.10.3",
+    "graphql-anywhere-mongodb": "^0.2.0",
+    "tslib": "~1.7.x"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.4",
+    "@types/chai": "^4.0.1",
+    "@types/chai-as-promised": "^0.0.31",
+    "@types/debug": "^0.0.29",
+    "@types/graphql": "^0.9.3",
+    "@types/mocha": "^2.2.41",
+    "@types/sinon": "^2.3.2",
+    "@types/sinon-chai": "^2.7.28",
+    "chai": "^4.0.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3",
+    "rimraf": "^2.6.1",
+    "sinon": "^2.3.7",
+    "sinon-chai": "^2.11.0",
+    "ts-node": "^3.2.0",
+    "typescript": "~2.4.x"
+  }
+}
