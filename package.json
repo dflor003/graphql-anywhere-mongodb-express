@@ -1,5 +1,5 @@
 {
-  "name": "graphql-anywhere-mongodb-middleware-express",
+  "name": "graphql-anywhere-mongodb-express",
   "version": "0.1.0",
   "description": "express middleware that accepts graphql requests and runs them as mongo queries",
   "main": "dist/src/index.js",
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/dflor003/graphql-anywhere-mongodb-middleware-express#readme",
   "dependencies": {
     "@types/mongodb": "^2.2.7",
+    "body-parser": "^1.17.2",
     "debug": "^2.6.8",
     "express": "^4.15.3",
     "graphql": "^0.10.3",
