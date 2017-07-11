@@ -10,6 +10,9 @@
     "test": "nyc mocha",
     "test:watch": "mocha -w"
   },
+  "files": [
+    "dist/src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dflor003/graphql-anywhere-mongodb-middleware-express.git"
