@@ -36,8 +36,10 @@
     "debug": "^2.6.8",
     "express": "^4.15.3",
     "graphql": "^0.10.3",
-    "graphql-anywhere-mongodb": "^0.2.0",
     "tslib": "~1.7.x"
+  },
+  "peerDependencies": {
+    "graphql-anywhere-mongodb": "<2.0.0"
   },
   "devDependencies": {
     "@types/body-parser": "^1.16.4",
