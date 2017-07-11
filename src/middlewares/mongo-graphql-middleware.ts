@@ -12,8 +12,8 @@ export function mongoGraphQLMiddleware(): Handler {
     try {
       // Extract query and variables from body
       const { query, variables } = req.body;
-      log(`Received graphql request   : \n`, query);
-      log(`Received graphql variables : \n`, variables);
+      log(`GQL Request   :`, query);
+      log(`GQL Variables :`, variables);
 
       // Convert raw graphql query to GraphQL AST
       const processedQuery = parse(query);
