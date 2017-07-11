@@ -9,13 +9,13 @@ Express middleware that serves up an endpoint and optionally graphiql that proce
 Install via `npm`:
 
 ```sh
-npm install --save graphql-anywhere-mongodb-express
+npm install --save graphql-anywhere-mongodb graphql-anywhere-mongodb-express
 ```
 
 Alternatively install via `yarn`:
 
 ```sh
-yarn add graphql-anywhere-mongodb-express
+yarn add graphql-anywhere-mongodb graphql-anywhere-mongodb-express
 ```
 
 ## Usage
