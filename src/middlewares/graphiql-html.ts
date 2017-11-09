@@ -1,6 +1,11 @@
 const GRAPHIQL_VERSION = '0.11.2';
 
-export const GraphiQLHtml = `
+export interface GraphiQLOptions {
+  endpoint?: string;
+  title?: string;
+}
+
+export const graphiQLHtml = ({ endpoint = undefined, title = 'GraphiQL' }: GraphiQLOptions) => `
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +20,7 @@ export const GraphiQLHtml = `
       height: 100vh;
     }
   </style>
+  <title>${title}</title>
 
   <link href="//cdn.jsdelivr.net/npm/graphiql@${GRAPHIQL_VERSION}/graphiql.css" rel="stylesheet" />
   <script src="//cdn.jsdelivr.net/fetch/0.9.0/fetch.min.js"></script>
@@ -80,9 +86,8 @@ export const GraphiQLHtml = `
   // use fetch, and could instead implement graphQLFetcher however you like,
   // as long as it returns a Promise or Observable.
   function graphQLFetcher(graphQLParams) {
-    // This example expects a GraphQL server at the path /graphql.
-    // Change this to point wherever you host your GraphQL server.
-    return fetch('/graphql', {
+    var endpoint = ${JSON.stringify(endpoint)} || window.location.pathname;
+    return fetch(endpoint, {
       method: 'post',
       headers: {
         'Accept': 'application/json',
