@@ -20,7 +20,10 @@ export default function mongoGraphql(options: MongoGraphQLOptions & GraphQLMongo
 
   // If Graphiql enabled, add it
   if (options.graphiql === true) {
-    router.get('/', graphiqlMiddleware());
+    router.get('/', graphiqlMiddleware({
+      endpoint: options.graphiqlEndpoint,
+      title: options.graphiqlTitle
+    }));
   }
 
   return router;

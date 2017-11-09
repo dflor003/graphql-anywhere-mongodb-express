@@ -39,7 +39,7 @@
     "tslib": "~1.7.x"
   },
   "peerDependencies": {
-    "graphql-anywhere-mongodb": "<2.0.0"
+    "graphql-anywhere-mongodb": ">=0.3.0"
   },
   "devDependencies": {
     "@types/body-parser": "^1.16.4",
